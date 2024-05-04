@@ -1,0 +1,53 @@
+{
+  "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    }
+  ],
+	"globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "51Tutor",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "styleIsolation": "apply-shared",
+    "scrollIndicator": "none",
+    "backgroundColor": "#F8F8F8",
+    "usingComponents": {
+      "t-toast": "/wxcomponents/dist/toast/toast",
+      "t-button": "/wxcomponents/dist/button/button",
+      "t-icon": "/wxcomponents/dist/icon/icon",
+      "t-search": "/wxcomponents/dist/search/search",
+      "t-sidebar": "/wxcomponents/dist/side-bar/side-bar",
+      "t-sidebar-item": "/wxcomponents/dist/side-bar-item/side-bar-item",
+      "t-popup": "/wxcomponents/dist/popup/popup",
+      "t-picker": "/wxcomponents/dist/picker/picker",
+      "t-tab": "/wxcomponents/dist/tab-bar/tab-bar",
+      "t-tabs": "/wxcomponents/dist/tabs/tabs",
+      "t-radio": "/wxcomponents/dist/radio/radio",
+      "t-input": "/wxcomponents/dist/input/input",
+      "t-cell-group": "/wxcomponents/dist/cell-group/cell-group",
+      "t-cell": "/wxcomponents/dist/cell/cell",
+      "t-radio-group": "/wxcomponents/dist/radio-group/radio-group",
+      "t-tabbar-item": "/wxcomponents/dist/tab-bar-item/tab-bar-item",
+      "t-upload": "/wxcomponents/dist/upload/upload",
+      "t-dialog": "/wxcomponents/dist/dialog/dialog",
+      "t-transition": "/wxcomponents/dist/transition/transition",
+      "t-switch": "/wxcomponents/dist/switch/switch",
+      "t-calendar": "/wxcomponents/dist/calendar/calendar",
+      "t-image": "/wxcomponents/dist/image/image",
+      "t-collapse": "/wxcomponents/dist/collapse/collapse",
+      "t-collapse-panel": "/wxcomponents/dist/collapse-panel/collapse-panel",
+      "t-loading": "/wxcomponents/dist/loading/loading",
+      "t-empty": "/wxcomponents/dist/empty/empty",
+      "t-tag": "/wxcomponents/dist/tag/tag",
+      "t-skeleton": "/wxcomponents/dist/skeleton/skeleton",
+      "t-notice-bar": "/wxcomponents/dist/notice-bar/notice-bar",
+      "t-checkbox-group": "/wxcomponents/dist/checkbox-group/checkbox-group",
+      "t-checkbox": "/wxcomponents/dist/checkbox/checkbox",
+      "t-action-sheet": "/wxcomponents/dist/action-sheet/action-sheet",
+      "t-datetime-picker": "/wxcomponents/dist/date-time-picker/date-time-picker"
+    }
+  }
+}
