@@ -2,7 +2,14 @@
   <view class="all-page-bg">
     <view class="text-area">
       <text class="title">Hi ! {{ title }}</text>
-      <t-button>test</t-button>
+      <text>当前天气：{{weatherData}} </text>
+      <text>{{ weatherData.text+weatherData.temp+'`'   }}</text>
+      <text>{{ weatherData.windDir+weatherData.windScale+'`' +weatherData.windSpeed+'m/s'   }}</text>
+      <span>相对湿度:{{ weatherData.humidity }}</span>
+      <span>体感温度:{{ weatherData.feelsLike }}</span>
+      <span>能见度:{{ weatherData.vis }}</span>
+      <span>大气压:{{ weatherData.pressure }}</span>
+      <t-button size="small" t-id="getWeather" @tap="getWeather()">获取天气</t-button>
     </view>
   </view>
 </template>
@@ -17,7 +24,10 @@ import { useUserStore } from "../../store/modules/index.store.js"
 let indexStore = useUserStore();
 
 let title = computed(() => { return indexStore.GET_NAME});
-const weatherData = ref([]);
+//当前天气
+const weatherData = ref({});
+//week天气
+const weatherList = ref([]);
 async function getWeather() {
   indexStore.SET_NAME('zhangc')
   console.log(indexStore.GET_NAME);
@@ -27,10 +37,16 @@ async function getWeather() {
     key: weatherKey,
   };
   let res = await http.get('/weather/now', params);
-  console.log('天气数据',res);
+  if (res.code == 200) { 
+    weatherData.value = res.now;
+  }
+  let resList = await http.get('/weather/7d', params);
+  if (resList.code == 200) {
+    weatherList.value = resList.daily;
+  }
 }
 onMounted(() => {
-  getWeather();
+  // getWeather();
 })
 </script>
 
