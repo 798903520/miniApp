@@ -14,5 +14,5 @@ export default {
 
 <style>
 /*每个页面公共css */
-@import "@/wxcomponents/dist/common/style/index.wxss"
+@import "@/wxcomponents/TDesignDist/common/style/index.wxss"
 </style>
